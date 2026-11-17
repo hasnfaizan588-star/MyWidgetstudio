@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_designer"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@string/subtitle_designer"
+            android:textSize="14sp"
+            android:textColor="#9AA0A6" />
+
+        <!-- Live preview -->
+        <FrameLayout
+            android:id="@+id/preview_frame"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <android.widget.TextClock
+                    android:id="@+id/preview_clock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/doto_round"
+                    android:includeFontPadding="false"
+                    android:textSize="56sp"
+                    android:textColor="#FFFFFF" />
+
+                <android.widget.TextClock
+                    android:id="@+id/preview_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:includeFontPadding="false"
+                    android:textSize="14sp"
+                    android:textColor="#B8FFFFFF" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- Colours -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/section_colours"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_text_color"
+            android:textSize="13sp"
+            android:textColor="#9AA0A6" />
+
+        <EditText
+            android:id="@+id/edit_text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="#FFFFFF"
+            android:inputType="text"
+            android:fontFamily="monospace"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button style="@style/PresetButton" android:id="@+id/preset_text_white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="White" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_text_amber" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Amber" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_text_red" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Red" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_text_cyan" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Cyan" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_bg_color"
+            android:textSize="13sp"
+            android:textColor="#9AA0A6" />
+
+        <EditText
+            android:id="@+id/edit_bg_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="#0B0B0D"
+            android:inputType="text"
+            android:fontFamily="monospace"
+            android:maxLines="1" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button style="@style/PresetButton" android:id="@+id/preset_bg_black" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Black" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_bg_charcoal" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Charcoal" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_bg_navy" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Navy" />
+            <Button style="@style/PresetButton" android:id="@+id/preset_bg_white" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="White" />
+        </LinearLayout>
+
+        <!-- Font size -->
+        <TextView
+            android:id="@+id/label_font_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/label_font_size_value"
+            android:textSize="13sp"
+            android:textColor="#9AA0A6" />
+
+        <SeekBar
+            android:id="@+id/seek_font_size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:min="0"
+            android:max="76" />
+
+        <!-- Corner radius -->
+        <TextView
+            android:id="@+id/label_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/label_radius_value"
+            android:textSize="13sp"
+            android:textColor="#9AA0A6" />
+
+        <SeekBar
+            android:id="@+id/seek_radius"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:min="0"
+            android:max="48" />
+
+        <!-- Switches -->
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/switch_show_date" />
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switch_24h"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/switch_24h" />
+
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/btn_apply" />
+
+        <Button
+            android:id="@+id/btn_import"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Import design from web app (.json)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/hint_add_widget"
+            android:textSize="13sp"
+            android:textColor="#9AA0A6" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Widget Studio</string>
+    <string name="widget_label">Digital Clock</string>
+    <string name="widget_description">Dot-matrix style digital clock for your home screen</string>
+
+    <string name="title_designer">Digital Clock</string>
+    <string name="subtitle_designer">Customize, then apply to your home-screen widget</string>
+
+    <string name="section_colours">Colours</string>
+    <string name="label_text_color">Text colour (hex)</string>
+    <string name="label_bg_color">Background colour (hex)</string>
+    <string name="label_font_size_value">Font size · %1$dsp</string>
+    <string name="label_radius_value">Corner radius · %1$ddp</string>
+    <string name="switch_show_date">Show date</string>
+    <string name="switch_24h">Use 24-hour time</string>
+    <string name="btn_apply">Apply to my home-screen widget</string>
+
+    <string name="toast_applied">Widget updated</string>
+    <string name="toast_no_widget">No clock widget found yet. Long-press your home screen → Widgets → My Widget Studio, then try again.</string>
+    <string name="hint_add_widget">Add the widget: long-press an empty spot on your home screen → Widgets → My Widget Studio → drag “Digital Clock”.</string>
+</resources>
